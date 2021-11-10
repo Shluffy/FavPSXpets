@@ -16,7 +16,7 @@ function loadpets(){
 		.then(data => {
     for (i = 0; i < data.length; i++) {
     //Construct Additiom
-    var addition = `<p><b>${data[i].name}:</b> <br> ${data[i].name} is a ${data[i].power} `;
+    var addition = `<p><b>${data[i].name}:</b> <br> ${data[i].name} is a ${data[i].power} power `;
     if (data[i].dm){
     addition += `Dark Matter `;
     }
