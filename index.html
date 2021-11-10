@@ -36,10 +36,10 @@ loadds()
 function loadds(){
 fetch("https://shluffy.github.io/FavPSXpets/json/dalmatiansquad.json") // Change this is pulling on a fork
 		.then(response => response.json())
-		.then(data => {
-    for (i = 0; i < data.length; i++) {
+		.then(pets => {
+    for (z= 0; z pets.length; z++) {
     //Construct Additiom
-    var addition = `<p><b>${data[i].name}:</b> <br> ${data[i].name} is a ${data[i].power} Rainbow Dalmatian, Part of my dalmation Squad`;
+    var addition = `<p><b>${pets[z].name}:</b> <br> ${pets[z].name} is a ${pets[z].power} Rainbow Dalmatian, Part of my dalmation Squad`;
     //Add addition
     document.getElementById("ds").innerHTML += addition;
     }
