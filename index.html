@@ -4,9 +4,13 @@
   <div id="pets">
   <h1>My Favorite Pet Simulator X Pets (PSX)</h1>
   </div>
+	
+  <div id="ds">
+  <h1>Dalmatian Sqaud</h1>
+  </div>
 <script>
-  loadds()
-function loadds(){
+  loadpets()
+function loadpets(){
 		fetch("https://shluffy.github.io/FavPSXpets/json/pets.json") // Change this is pulling on a fork
 		.then(response => response.json())
 		.then(data => {
@@ -22,12 +26,28 @@ function loadds(){
     if (data[i].g){
     addition += `Golden `;
     }
-    addition += `${data[i].pet} named ${data[i].name}`;
+    addition += `${data[i].pet}.`;
     //Add addition
     document.getElementById("pets").innerHTML += addition;
     }
   });
   }
+loadds()
+function loadds(){
+fetch("https://shluffy.github.io/FavPSXpets/json/dalmatiansquad.json") // Change this is pulling on a fork
+		.then(response => response.json())
+		.then(data => {
+    for (i = 0; i < data.length; i++) {
+    //Construct Additiom
+    var addition = `<p><b>${data[i].name}:</b> <br> ${data[i].name} is a ${data[i].power} Rainbow Dalmatian, Part of my dalmation Squad`;
+    //Add addition
+    document.getElementById("ds").innerHTML += addition;
+    }
+  });
+  }
+
+
+}
   
 	  
   </script>
