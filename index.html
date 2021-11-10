@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <title>My Favorite Roblox Adopt Me Pets - MyFavAdoptMePets - Shluffy</title>
+  <div id="pets">
+  <h1>My Favorite Pet Simulator X Pets (PSX)</h1>
+  </div>
+<script>
+  loadds()
+function loadds(){
+		fetch("https://shluffy.github.io/FavPSXpets/json/pets.json") // Change this is pulling on a fork
+		.then(response => response.json())
+		.then(data => {
+    for (i = 0; i < data.length; i++) {
+    //Construct Additiom
+    var addition = `<p><b>${data[i].name}:</b> <br> ${data[i].name} is a ${data[i].power} `;
+    if (data[i].dm){
+    addition += `Dark Matter `;
+    }
+    if (data[i].rb){
+    addition += `Rainbow `;
+    }
+    if (data[i].g){
+    addition += `Golden `;
+    }
+    addition += `${data[i].pet} named ${data[i].name}`;
+    //Add addition
+    document.getElementById("pets").innerHTML += addition;
+    }
+  });
+  }
+  
+	  
+  </script>
+	
+</html>
