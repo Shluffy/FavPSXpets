@@ -1,27 +1,37 @@
 [
   {
     "name": "Dalmy Sr",
-    "power": 61
+    "power": 61,
+    "rb": true,
+    "dm": false
   },
   
   {
     "name": "Dalmy Jr",
-    "power": 60
+    "power": 60,
+    "rb": true,
+    "dm": false
   },
   
   {
     "name": "Dalmy",
-    "power": 56
+    "power": 56,
+    "rb": true,
+    "dm": false
   },
   
   {
     "name": "Danny",
-    "power": 56
+    "power": 56,
+    "rb": true,
+    "dm": false
   },
   
   {
     "name": "Teddy",
-    "power": 56
+    "power": 56,
+    "rb": true,
+    "dm": false
   }
   
 ]
